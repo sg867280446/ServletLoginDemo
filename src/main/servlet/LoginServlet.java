@@ -1,6 +1,8 @@
 package main.servlet;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,9 +31,11 @@ public class LoginServlet extends HttpServlet{
 		System.out.println("输出session值");
 		if(req.getSession() != null){		
 			HttpSession session = req.getSession();
-			System.out.println(session.getMaxInactiveInterval());
-			session.setMaxInactiveInterval(30);
 			System.out.println(req.getSession().getId());
+			System.out.println("session 还有 "+session.getMaxInactiveInterval()+" 秒失效");
+			session.setMaxInactiveInterval(10);
+			System.out.println("session 被设置为10秒后失效");
+			System.out.println("现在的时间是 "+new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
 		}
 		
 		String username = req.getParameter("username");
