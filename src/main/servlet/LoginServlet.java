@@ -9,6 +9,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet(name = "login" , urlPatterns = { "/login" })
 @SuppressWarnings("unchecked")
@@ -26,7 +27,10 @@ public class LoginServlet extends HttpServlet{
 			}
 		}
 		System.out.println("Êä³ösessionÖµ");
-		if(req.getSession() != null){			
+		if(req.getSession() != null){		
+			HttpSession session = req.getSession();
+			System.out.println(session.getMaxInactiveInterval());
+			session.setMaxInactiveInterval(30);
 			System.out.println(req.getSession().getId());
 		}
 		
