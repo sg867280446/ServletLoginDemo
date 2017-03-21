@@ -12,6 +12,7 @@ public class TrimWrapper extends HttpServletRequestWrapper{
 
 	
     public String getParameter(String name) {
+    	System.out.println("TrimWrapper getParameter");
         return this.getRequest().getParameter(name).trim();
     }
     

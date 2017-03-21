@@ -10,6 +10,7 @@ public class PasswordReverseWrapper extends HttpServletRequestWrapper{
 	}
 	
     public String getParameter(String name) {
+    	System.out.println("PasswordReverseWrapper getParameter");
     	if(name.trim().equals("password")){
     		StringBuffer sb = new StringBuffer(this.getRequest().getParameter(name).trim());
     		return sb.reverse().toString();
