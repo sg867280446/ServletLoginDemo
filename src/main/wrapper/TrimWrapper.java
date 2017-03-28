@@ -2,6 +2,7 @@ package main.wrapper;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
+import javax.servlet.http.HttpSession;
 
 public class TrimWrapper extends HttpServletRequestWrapper{
 
@@ -16,5 +17,9 @@ public class TrimWrapper extends HttpServletRequestWrapper{
         return this.getRequest().getParameter(name).trim();
     }
     
+    public HttpSession getSession() {
+    	System.out.println("TrimWrapper getSession");
+    	return null;
+    }
     //you can do more about parameters
 }
