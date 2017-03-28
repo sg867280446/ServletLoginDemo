@@ -17,9 +17,5 @@ public class TrimWrapper extends HttpServletRequestWrapper{
         return this.getRequest().getParameter(name).trim();
     }
     
-    public HttpSession getSession() {
-    	System.out.println("TrimWrapper getSession");
-    	return null;
-    }
     //you can do more about parameters
 }

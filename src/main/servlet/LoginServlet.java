@@ -33,8 +33,8 @@ public class LoginServlet extends HttpServlet{
 			HttpSession session = req.getSession();
 			System.out.println(req.getSession().getId());
 			System.out.println("session 还有 "+session.getMaxInactiveInterval()+" 秒失效");
-			session.setMaxInactiveInterval(10);
-			System.out.println("session 被设置为10秒后失效");
+			session.setMaxInactiveInterval(1000);
+			System.out.println("session 被设置为1000秒后失效");
 			System.out.println("现在的时间是 "+new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
 		}
 		

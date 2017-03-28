@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import main.wrapper.TrimWrapper;
 
 @WebFilter(filterName="TrimFilter",urlPatterns="/*")
-public class TrimFilter implements Filter{
+public class B_TrimFilter implements Filter{
 
 	@Override
 	public void destroy() {

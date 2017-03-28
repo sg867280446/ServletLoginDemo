@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import main.wrapper.PasswordReverseWrapper;
 
 @WebFilter(filterName="PasswordReverseFilter",urlPatterns="/*")
-public class PasswordReverseFilter implements Filter{
+public class A_PasswordReverseFilter implements Filter{
 
 	@Override
 	public void destroy() {
